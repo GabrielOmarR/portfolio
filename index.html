@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio profesional para desarrollador web" />
+    <meta name="keywords" content="desarrollador web, front-end, html, css, javascript, reactJS, Bootstrap" />
+    <meta name="author" content="Gabriel Omar Rea" />
+    <title>Portafolio - Front-end</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/fonts/fontawesome-free-5.15.1-web/css/all.css" />
+    <link rel="stylesheet" href="assets/css/hamburger.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+
+            <div class="fixed-header">
+                <div class="user-img">
+                    <div class="box"></div>
+                    <p class="name">Gabriel Rea</p>
+                </div>
+
+                <nav class="nav">
+                    <ul>
+                        <li class="active"><a href="#"><i class="fas fa-home"></i>Inicio</a></li>
+                        <li><a href="#sobre-mi"><i class="far fa-user"></i>Sobre mi</a></li>
+                        <li><a href="#habilidades"><i class="fas fa-user-cog"></i>Habilidades</a></li>
+                        <li><a href="#proyectos"><i class="fas fa-briefcase"></i>Proyectos</a></li>
+                        <li><a href="#contacto"><i class="far fa-envelope"></i>Contacto</a></li>
+                    </ul>
+
+                    <div class="cv">
+                        <a href="./assets/cv/curriculum.pdf" target="_blank">Ver Curriculum</a>
+                    </div>
+
+                    <div class="redes-sociales">
+                        <a href="https://www.behance.net/gabrielrea" target="_blank"><i class="fab fa-behance"></i></a>
+                        <a href="https://github.com/GabrielOmarR" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gabriel-rea" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.codepen.io/gabrielomarr" target="_blank"><i class="fab fa-codepen"></i></a>
+                    </div>
+                </nav>
+
+                <button id="burger" class="hamburger hamburger--spin" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
+        </header>
+
+        <main class="main">
+
+            <div class="background">
+                <div class="contain">
+                    <div class="contain-animation">
+                        <p class="bienvenido">Bienvenido a mi portafolio de</p>
+                        <h1>Desarrollador Front-end</h1>
+                    </div>
+                </div>
+            </div>
+
+            <section class="contain-center sobre-mi">
+                <h2 id="sobre-mi">Sobre mi</h2>
+
+                <div class="box-text">
+                    <p>
+                        Desarrollador Front-end con conocimientos en el área del Back-end con amplio manejo y facilidad
+                        de
+                        aprender las herramientas de hoy en día, una persona que se desafía y se impulsa a si mismo para
+                        lograr el máximo y mejor rendimiento que pueda ofrecer a la hora de trabajar en equipo,
+                        capacidad
+                        rápida de aprendizaje y adaptación para el área designada.
+                    </p>
+                </div>
+
+
+                <div class="sub-sobre-mi">
+                    <h3>Desarrollador y Diseñador jr.</h3>
+                    <p>Poseo mas de 3 años aprendiendo sobre el diseño web de forma autodidactica.</p>
+
+                    <div class="list">
+
+                        <div class="list-1">
+                            <ul>
+                                <li>24 años</li>
+                                <li>Gabriel.rea96@gmail.com</li>
+                                <li>Front-end</li>
+                            </ul>
+                        </div>
+
+                        <div class="list-2">
+                            <ul>
+                                <li>Cursos en Ed.team</li>
+                                <li>Cursos en Platzi</li>
+                                <li>Cursos en Udemy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="contain-center habilidades">
+                <h2 id="habilidades">Habilidades</h2>
+
+
+
+            </section>
+
+            <section class="contain-center trabajos">
+                <h2 id="proyectos">Proyectos</h2>
+
+                <div class="filter">
+                    <div class="filter-box">
+                        <p class="all">All</p>
+                    </div>
+
+                    <div class="filter-box">
+                        <p class="newbie">Newbie</p>
+                    </div>
+
+                    <div class="filter-box">
+                        <p class="junior">Junior</p>
+                    </div>
+
+                    <div class="filter-box">
+                        <p class="intermediate">Intermediate</p>
+                    </div>
+
+                    <div class="filter-box">
+                        <p class="advanced">Advanced</p>
+                    </div>
+                </div>
+
+                <div class="box-gallery gallery">
+
+                </div>
+
+            </section>
+
+            <section class="contain-center contacto">
+                <h2 id="contacto">Contacto</h2>
+
+                <form id="form" action="./enviar.php" method="POST">
+                    <div class="grid-form">
+
+                        <div>
+                            <input type="text" name="nombre" placeholder="Nombre" id="name" />
+                            <p>Nombre invalido</p>
+                        </div>
+
+                        <div>
+                            <input type="email" name="email" placeholder="Email" id="email" />
+                            <p>Email invalido</p>
+                        </div>
+
+                        <div>
+                            <input type="text" name="asunto" placeholder="Asunto" id="subject" />
+                            <p>Asunto invalido</p>
+                        </div>
+
+                        <div class="textarea">
+                            <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" id="message"></textarea>
+                            <p>Mensaje invalido</p>
+                        </div>
+
+                    </div>
+                    <input type="submit" value="Enviar" class="btn" name="enviar" />
+                    <div class="status">
+                        <p class="fail">Formulario Invalido!!</p>
+                        <p class="success">Formulario Enviado Correctamente!!</p>
+                    </div>
+
+                </form>
+
+
+            </section>
+        </main>
+        <div class="wave-box"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C155.47,-16.28 338.31,97.20 504.79,7.41 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none;"></path>
+            </svg></div>
+    </div>
+
+
+    <script type="module" src="main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/slick/slick.min.js"></script>
+</body>
+
+</html>

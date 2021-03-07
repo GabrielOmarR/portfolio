@@ -1,0 +1,352 @@
+/* 'Bai Jamjuree' */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root{
+    /* Colors */
+
+    /* Primary */
+
+    --strongCyan: hsl(171, 66%, 44%);
+    --strongCyanBorder: hsl(171, 66%, 34%);
+    --lightBlue: hsl(233, 100%, 69%);
+    --lightBlueBorder: hsl(233, 46%, 47%);
+
+    /* Neutral */
+
+    --darkGrayishBlue: hsl(210, 10%, 33%);
+    --grayishBlue: hsl(201, 11%, 66%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    padding: 50px 35px;
+    font-family: 'Bai Jamjuree';
+}
+
+body::before{
+    content: '';
+    background: url(../images/bg-header-mobile.png) no-repeat;
+    width: 375px;
+    height: 375px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.container{
+    width: 100%;
+}
+
+.container header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .img-logo{
+    margin: 50px 0;
+}
+
+.text-container{
+    text-align: center;
+}
+
+.text-container .title{
+    font-size: 1.8rem;
+}
+
+.text-container h2{
+    color: var(--darkGrayishBlue);
+    margin-bottom: 20px
+}
+
+.text-container p{
+    font-size: .85rem;
+    color: var(--grayishBlue);
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    width: 100%;
+}
+
+article .text-container h2{
+    font-size: 1.5rem;
+}
+
+article .text-container{
+    margin-bottom: 50px;
+}
+
+article .text-img{
+    margin: 30px 0;
+}
+
+.btn-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.btn-box a{ 
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    margin: 10px 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-box .ios{
+    background-color: var(--strongCyan);
+    border-bottom: 3px solid var(--strongCyanBorder);
+    transition: filter .5s;
+}
+
+.btn-box .ios:hover{
+    filter: opacity(.8);
+}
+
+.btn-box .mac{
+    background-color: var(--lightBlue);
+    border-bottom: 3px solid var(--lightBlueBorder);
+    transition: filter .5s;
+}
+
+.btn-box .mac:hover{
+    filter: opacity(.8);
+}
+
+.image-computer{
+    margin-bottom: 40px;
+}
+
+.image-computer img{
+    width: 100%;
+}
+
+.marks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marks img{
+    margin: 40px 0;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    color: var(--darkGrayishBlue);
+    margin-top: 150px;
+}
+
+footer .box-img-footer{
+    width: 50px;
+}
+
+footer .box-img-footer img{
+    width: 100%
+}
+
+footer ul{
+    text-align: center;
+    list-style: none;
+}
+
+footer ul li{
+    margin: 20px 0;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+footer ul li:hover{
+    color: var(--strongCyan);
+}
+
+.redes{
+    color: var(--darkGrayishBlue);
+    font-size: 1.6rem;
+    margin-top: 40px;
+}
+
+.redes i{
+    margin: 0 15px;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+.redes i:hover{
+    color: var(--strongCyan);
+}
+
+
+@media screen and (min-width: 1024px){
+
+    body::before{
+        content: '';
+        background: url(../images/bg-header-desktop.png) no-repeat;
+        width: 1440px;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .container{
+        max-width: 1024px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-computer{
+        position: relative;
+        top: 0;
+        left: -50px;
+    }
+
+    header{
+        padding-bottom: 100px;
+    }
+
+    .text-container{
+        width: 500px;
+    }
+
+    .btn-box{
+        flex-direction: row;
+        width: 500px;
+    }
+
+    .btn-box a{
+        margin: 0 10px;
+    }
+
+    article .box-img-text{
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    article{
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .box-img-text .text-container{
+        width: 420px;
+        text-align: left;
+        padding: 0 0 0 20px;
+    }
+
+    article:nth-child(2) .box-img-text{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article:nth-child(2) .list .text-container{
+        width: 300px;
+        text-align: center;
+        margin: 0;
+    }
+
+    article:nth-child(2) .list{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    article:nth-child(2) .list .text-img{
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    article:nth-child(2) .list img{
+        height: 50px;
+    }
+
+    article:nth-child(2) .list .text-container{
+        margin-left: 20px;
+        padding-left: 0;
+    }
+
+    article:nth-child(2) .title-medium .text-container{
+        width: 500px;
+        text-align: center;
+        margin: 0;
+        padding-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .marks{
+        max-width: 1024px;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding: 100px 0;
+    }
+
+    footer{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1024px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    footer ul{
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: 600px;
+        text-align: left;
+    }
+
+    footer ul li{
+        width: 200px;
+    }
+
+    footer ul li:nth-child(2){
+        order: 1;
+    }
+
+    footer ul li:nth-child(4){
+        order: 2;
+    }
+
+    .redes{
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    .menubar{
+        padding-bottom: 100px;
+    }
+
+}

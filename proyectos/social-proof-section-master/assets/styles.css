@@ -1,0 +1,221 @@
+/* 'Spartan' */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root{
+    /* Colors */
+    /* Primary */
+    
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    
+    /* Neutral */
+    
+    --darkGrayishMagenta: hsl(303, 10%, 53%);
+    --lightGrayishMagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Spartan';
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+/* CONTAINER HEADER */
+
+.container__header{
+    margin-bottom: 20px;
+}
+
+.container__header .title{
+    color: var(--veryDarkMagenta);
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 35px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.container__header p{
+    font-weight: 400;
+    color: var(--darkGrayishMagenta);
+    text-align: center;
+}
+
+/* CONTAINER START */
+.container__start{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.box-start{
+    margin-bottom: 50px;
+}
+
+.starts{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.starts img{
+    margin: 0 5px;
+}
+
+.box-start p{
+    font-weight: 700;
+    color: var(--veryDarkMagenta);
+}
+
+/* CONTAINER CARD */
+
+.card{
+    background-color: var(--veryDarkMagenta);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+.card__image{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.card__image img{
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.card__image .data{
+    color: var(--lightGrayishMagenta);
+}
+
+.card__image .name{
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.card__image .buyer{
+    color: var(--softPink);
+    font-weight: 100;
+}
+
+.card p{
+    color: var(--white);
+    font-size: .82rem;
+    line-height: 20px;
+}
+
+@media screen and (min-width: 1440px){
+    
+    .container{
+        margin-top: 100px;
+        max-width: 1440px;
+    }
+
+    .container__desktop{
+        display: flex;
+        align-items: center;
+    }
+
+    .container__header{
+        width: 40%;
+        padding-right: 100px;
+    }
+
+    .container__header .title{
+        text-align: left;
+        margin-left: 0;
+        font-size: 3rem;
+        line-height: 50px;
+    }
+
+    .container__header .description{
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    .container__start{
+        width: 60%;
+    }
+
+    .box-start{
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .starts{
+        margin-bottom: 0;
+        padding-bottom: 5px;
+        margin-right: 20px;
+    }
+
+    .box-start:first-child{
+        margin-right: 400px;
+    }
+
+    .box-start:nth-child(2){
+        margin-right: 200px;
+    }
+
+    .container__card{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .card{
+        width: 400px;
+        height: 300px;
+        margin-bottom: 0;
+        padding: 40px;
+        margin-left: 20px;
+    }
+
+    .card:first-child{
+        margin-left: 0;
+    }
+
+    .card:nth-child(2){
+        margin-top: 25px;
+    }
+
+    .card:last-child{
+        margin-top: 45px;
+    }
+
+    .card__image .name{
+        font-size: 1.2rem;
+    }
+    
+    .card__image .buyer{
+        font-size: 1rem;
+    }
+
+    .card p{
+        font-size: 1rem;
+        line-height: 25px;
+    }
+
+}

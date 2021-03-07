@@ -1,0 +1,290 @@
+/* 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root{
+    /* Colors */
+    /* Primary */
+
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --greenShadow: hsl(154, 56%, 43%);
+    --greenClick: hsl(154, 67%, 60%);
+
+    /* Accent */
+
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue: hsl(246, 25%, 77%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--red);
+    background-image: url('../images/bg-intro-mobile.png');
+    background-position: center;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1{
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header p{
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.box{
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
+
+.box-violet{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.box-violet p{
+    font-weight: 700;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.box-violet p span{
+    color: var(--grayishBlue);
+    font-weight: 100;
+    font-size: .9rem;
+}
+
+.box-white{
+    padding: 40px 20px;
+}
+
+.box-white input{
+    padding: 15px 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--grayishBlue);
+    font-weight: 600;
+    color: var(--darkBlue);
+}
+
+.input-container{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.box-white input:focus{
+    outline: none;
+    border: 1px solid var(--darkBlue);
+}
+
+.box-white input::placeholder{
+    font-weight: 700;
+}
+
+.box-white .error{
+    visibility: hidden;
+}
+
+.box-white .error p{
+    text-align: right;
+    font-size: .7rem;
+    margin-top: 5px;
+    padding-top: 0;
+    color: var(--red);
+    font-style: italic;
+}
+
+/* ERROR INPUTS */
+
+.box-white .name:focus:invalid ~ .error{
+    visibility: visible;
+}
+
+.box-white .lastName:invalid:focus ~ .error{
+    visibility: visible;
+}
+
+.box-white .email:invalid:focus{
+    font-weight: 700;
+    color: var(--red);
+}
+
+.box-white .email:invalid:focus ~ .error{
+    visibility: visible;
+}
+
+.box-white .password:invalid:focus ~ .error{
+    visibility: visible;
+}
+
+/*ERROR INPUTS IMG*/
+.error-img{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    visibility: hidden;
+}
+
+.box-white .name:focus:invalid ~ .error-img{
+    visibility: visible;
+}
+
+.box-white .lastName:invalid:focus ~ .error-img{
+    visibility: visible;
+}
+
+.box-white .email:invalid:focus ~ .error-img{
+    font-weight: 700;
+    color: var(--red);
+}
+
+.box-white .email:invalid:focus ~ .error-img{
+    visibility: visible;
+}
+
+.box-white .password:invalid:focus ~ .error-img{
+    visibility: visible;
+}
+
+.box-white .name:focus:invalid ~ .error{
+    visibility: visible;
+}
+
+.box-white .lastName:invalid:focus ~ .error{
+    visibility: visible;
+}
+
+.box-white .email:invalid:focus{
+    font-weight: 700;
+    color: var(--red);
+}
+
+.box-white .email:invalid:focus ~ .error{
+    visibility: visible;
+}
+
+.box-white .password:invalid:focus ~ .error{
+    visibility: visible;
+}
+
+
+.btn{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 0 var(--greenShadow);
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:active{
+    background-color: var(--greenClick);
+    box-shadow: 0 4px 0 var(--green);
+}
+
+.box-white p{
+    font-size: .8rem;
+    padding: 0 10px;
+    text-align: center;
+    color: var(--grayishBlue);
+}
+
+.box-white p span{
+    color: var(--red);
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1024px){
+
+    body{
+        background-image: url('../images/bg-intro-desktop.png');
+    }
+
+    .container{
+        width: 90%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header{
+        padding: 0 30px;
+    }
+
+    .header h1{
+        font-size: 2.5rem;
+        text-align: left;
+    }
+    
+    .header p{
+        text-align: left;
+        width: 400px;
+    }
+
+    .box-violet p{
+        font-weight: 700;
+        text-align: center;
+        width: 500px;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    
+
+}
+
+@media screen and (min-width: 1440px){
+
+    .container{
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .header h1{
+        font-size: 3rem;
+        text-align: left;
+    }
+    
+    .header p{
+        text-align: left;
+        width: 500px;
+    }
+
+}
