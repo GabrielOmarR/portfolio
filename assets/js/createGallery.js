@@ -10,7 +10,12 @@ let trabajos = [
     { local: 'insure-landing-page-master/', name: 'desktop-preview-9', difficulty: 'junior', alt: 'frontend Mentor insure landing page master' },
     { local: 'pricing-component-with-toggle-master/', name: 'desktop-preview-10', difficulty: 'junior', alt: 'frontend Mentor pricing component with toggle master' },
     { local: 'social-media-dashboard-with-theme-switcher-master/', name: 'desktop-preview-11', difficulty: 'junior', alt: 'frontend Mentor social media dashboard with theme switcher master' },
-    { local: 'chat-app-css-illustration-master/', name: 'desktop-preview-12', difficulty: 'intermediate', alt: 'afrontend Mentor chat app css illustration master' }
+    { local: 'chat-app-css-illustration-master/', name: 'desktop-preview-12', difficulty: 'intermediate', alt: 'frontend Mentor chat app css illustration master' },
+    { local: 'easybank-landing-page-master/', name: 'desktop-preview-13', difficulty: 'intermediate', alt: 'frontend Mentor easybank landing page master' },
+    { local: 'room-homepage-master/', name: 'desktop-preview-14', difficulty: 'intermediate', alt: 'frontend Mentor room homepage master' },
+    { local: 'url-shortening-api-master/', name: 'desktop-preview-15', difficulty: 'intermediate', alt: 'frontend Mentor url shortening api master' },
+    { local: 'loopstudios-landing-page-main/', name: 'desktop-preview-16', difficulty: 'junior', alt: 'frontend Mentor loopstudios landing page main' },
+    { local: 'rest-countries-api-with-color-theme-switcher-master/', name: 'desktop-preview-17', difficulty: 'advanced', alt: 'frontend Mentor loopstudios landing page main' }
 ];
 
 
@@ -32,13 +37,6 @@ function drawBox(el, box) {
 }
 
 function crearElementos(box, difficulty = '') {
-
-    if(difficulty === 'advanced'){
-        const $text = document.createElement('p');
-        $text.classList.add('fail-work');
-        $text.innerHTML = "No hay trabajos aun";
-        box.appendChild($text);
-    }
 
     trabajos.forEach((el, i) => {
 

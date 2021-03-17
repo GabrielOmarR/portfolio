@@ -619,6 +619,12 @@ header .hamburger-inner::after {
   filter: grayscale(0);
 }
 
+.filter-text {
+  text-align: center;
+  color: var(--title-color);
+  font-size: 1.1em;
+}
+
 /* -------------------------------------
 ----------------------------------------
   CONTACTO
