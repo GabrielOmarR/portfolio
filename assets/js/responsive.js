@@ -16,17 +16,17 @@ let habilidades = [
     { name: 'logo-mysql', alt: 'logo mysql' }
 ];
 
-function skillsMobile(){
+function skillsMobile() {
     const $boxMobile = document.createElement('div');
     $boxMobile.classList.add('habilidades-mobile');
     const $boxHabilidades = document.createElement('div');
     $boxHabilidades.classList.add('box-habilidades');
 
-    for(let i = 0; i <= 5; i++){
+    for (let i = 0; i <= 5; i++) {
         const $boxHabilidad = document.createElement('div');
         $boxHabilidad.classList.add('box-habilidad');
         const $img = document.createElement('img');
-        $img.src = `assets/images/logos/${habilidades[i].name}.png`;
+        $img.src = `assets/images/logos/${habilidades[i].name}.webp`;
         $img.alt = habilidades[i].alt;
 
         $boxHabilidad.appendChild($img);
@@ -37,13 +37,13 @@ function skillsMobile(){
 
     const $buttonShow = document.createElement('button');
     $buttonShow.classList.add('btn');
-    $buttonShow.id="habilidades-show";
+    $buttonShow.id = "habilidades-show";
     $buttonShow.textContent = 'Ver más';
 
     const $buttonHidden = document.createElement('button');
     $buttonHidden.classList.add('btn');
     $buttonHidden.classList.add('btn-hidden');
-    $buttonHidden.id="habilidades-hidden";
+    $buttonHidden.id = "habilidades-hidden";
     $buttonHidden.textContent = 'Ocultar';
 
     $boxMobile.appendChild($buttonShow);
@@ -52,7 +52,7 @@ function skillsMobile(){
     return $boxMobile;
 }
 
-function skillsDesktop(){
+function skillsDesktop() {
 
     const $boxDesktop = document.createElement('div');
     $boxDesktop.classList.add('habilidades-desktop');
@@ -62,7 +62,7 @@ function skillsDesktop(){
     habilidades.forEach(el => {
         const $boxHabilidad = document.createElement('div');
         const $img = document.createElement('img');
-        $img.src = `assets/images/logos/${el.name}.png`;
+        $img.src = `assets/images/logos/${el.name}.webp`;
         $img.alt = el.alt;
 
         $boxHabilidad.appendChild($img);
@@ -75,27 +75,27 @@ function skillsDesktop(){
 }
 
 
-export default function responsiveMedia(target, mq){
+export default function responsiveMedia(target, mq) {
 
     let breakpoint = window.matchMedia(mq);
     let $habilidad = document.querySelector(`.${target}`);
 
     const responsive = (e) => {
 
-        if($habilidad.lastElementChild.classList.contains('habilidades-desktop')){
+        if ($habilidad.lastElementChild.classList.contains('habilidades-desktop')) {
             $habilidad.removeChild($habilidad.lastElementChild);
-        }else{
+        } else {
             $habilidad.removeChild($habilidad.firstElementChild.nextSibling);
         }
-        
 
-        if(e.matches){
+
+        if (e.matches) {
             const $drawSkills = skillsDesktop();
             $habilidad.appendChild($drawSkills);
             Slider();
 
-        }else{
-            
+        } else {
+
             const $drawSkills = skillsMobile();
             $habilidad.appendChild($drawSkills);
 

@@ -7,7 +7,7 @@ let habilidades = [
     { name: 'logo-mysql', alt: 'logo mysql' }
 ];
 
-export default function ResponsiveHabilidad(){
+export default function ResponsiveHabilidad() {
 
     const $responsiveHabilidad = document.createElement('div');
     $responsiveHabilidad.classList.add('responsive-habilidad');
@@ -16,13 +16,13 @@ export default function ResponsiveHabilidad(){
         const $boxHabilidad = document.createElement('div');
         $boxHabilidad.classList.add('box-habilidad');
         const $img = document.createElement('img');
-        $img.src = `assets/images/logos/${el.name}.png`;
+        $img.src = `assets/images/logos/${el.name}.webp`;
         $img.alt = el.alt;
 
         $boxHabilidad.appendChild($img);
         $responsiveHabilidad.appendChild($boxHabilidad);
     });
-    
+
     return $responsiveHabilidad;
 
 }

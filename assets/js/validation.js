@@ -1,18 +1,33 @@
-export default function Validation($form){
+function addClass($div) {
+    $div.classList.add("error");
+}
 
-    
-    $form.addEventListener('submit', (e) =>{
+function removeClass($div) {
+    $div.classList.remove("error");
+}
 
-        const name = $form.querySelector('#name').value;
-        const email = $form.querySelector('#email').value;
-        const subject = $form.querySelector('#subject').value;
-        const message = $form.querySelector('#message').value;
+export default function Validation() {
 
+    const $form = document.getElementById("form");
+
+    $form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const name = form.get('name');
+        const email = form.get('_replyto');
+        const subject = form.get('subject');
+        const message = form.get('message');
+
+        const $success = $form.querySelector('.success');
+        const $fail = $form.querySelector('.fail');
+
+        // EXPRESIONES REGULARES
         const regName = /^[a-z + a-z]{4,20}$/gi;
         const regEmail = /^[a-z0-9]{1,20}[.]?[_]?[a-z0-9]{1,10}@{1}[a-z]{1,20}[.][a-z]{1,5}?[.a-z]{1,10}$/gi;
         const regSubject = /^[a-z0-9-_]{1,10}[ ]?[a-z0-9-_]{1,10}?[ ]?[a-z0-9-_]{1,10}?$/gi;
         const regMessage = /^[a-zñ0-9 -./a-zñ]{10,150}$/gi;
 
+        // ERRORES
         const $boxError = $form.firstElementChild;
         const $errorName = $boxError.firstElementChild;
         const $errorEmail = $errorName.nextElementSibling;
@@ -26,81 +41,68 @@ export default function Validation($form){
             message: false
         }
 
-        const agregarClass = ($div) =>{
-            $div.classList.add("error");
-        }
-
-        const removerClass = ($div) =>{
-            $div.classList.remove("error");   
-        }
-
-        if(regName.test(name)){
-
-            if($errorName.classList.contains('error')){
-                removerClass($errorName);
+        if (regName.test(name)) {
+            if ($errorName.classList.contains('error')) {
+                removeClass($errorName);
             }
-
             status.name = true;
-            
-        }else{
-            agregarClass($errorName);
+        } else {
+            addClass($errorName);
         }
 
-        if(regEmail.test(email)){
-
-            if($errorEmail.classList.contains('error')){
-                removerClass($errorEmail);
+        if (regEmail.test(email)) {
+            if ($errorEmail.classList.contains('error')) {
+                removeClass($errorEmail);
             }
-
             status.email = true;
-
-        }else{
-            agregarClass($errorEmail);
+        } else {
+            addClass($errorEmail);
         }
 
 
-        if(regSubject.test(subject)){
-
-            if($errorSubject.classList.contains('error')){
-                removerClass($errorSubject);
+        if (regSubject.test(subject)) {
+            if ($errorSubject.classList.contains('error')) {
+                removeClass($errorSubject);
             }
-
             status.subject = true;
-
-        }else{
-            agregarClass($errorSubject); 
+        } else {
+            addClass($errorSubject);
         }
 
-        if(regMessage.test(message)){
 
-            if($errorMessage.classList.contains('error')){
-                removerClass($errorMessage);
+        if (regMessage.test(message)) {
+            if ($errorMessage.classList.contains('error')) {
+                removeClass($errorMessage);
             }
-
             status.message = true;
-
-        }else{
-            agregarClass($errorMessage); 
+        } else {
+            addClass($errorMessage);
         }
-
-        const $success = $form.querySelector('.success');
-        const $fail = $form.querySelector('.fail');
 
         let formValues = Object.values(status);
         let valid = formValues.findIndex(valor => valor === false);
 
+        if (valid === -1) {
 
-        if(valid === -1){
-            $fail.style.display = 'none';
-            $success.style.display = 'block'; 
-        }else{
+            const response = await fetch($form.action, {
+                method: $form.method,
+                body: form,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+
+            if (response.ok) {
+                $form.reset();
+                $fail.style.display = 'none';
+                $success.style.display = 'block';
+            }
+
+        } else {
             $success.style.display = 'none';
             $fail.style.display = 'block';
-            e.preventDefault();
         }
-        
 
     });
-
 
 }

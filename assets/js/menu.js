@@ -1,4 +1,8 @@
-export default function Menu($menu, $nav, $list) {
+export default function Menu() {
+
+    const $menu = document.getElementById('burger');
+    const $nav = document.querySelector('.nav');
+    const $list = document.querySelectorAll('.nav ul li a');
 
     $menu.addEventListener('click', () => {
 

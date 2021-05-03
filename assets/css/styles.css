@@ -1,8 +1,14 @@
-/*Quicksand*/
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
+  font-weight: 500;
+}
 
-/*PT Sans Narrow*/
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+@font-face {
+  font-family: 'PT Sans Narrow';
+  src: url('./fonts/PT_Sans_Narrow/PTSansNarrow-Bold.ttf');
+  font-weight: 700;
+}
 
 /* -------------------------------------
 ----------------------------------------
@@ -345,7 +351,7 @@ header .hamburger-inner::after {
 
 .contain-animation::before {
   content: "";
-  width: 320px;
+  width: 420px;
   height: 5px;
   background-color: var(--green);
   margin-bottom: 10px;
@@ -357,7 +363,7 @@ header .hamburger-inner::after {
 
 .contain-animation::after {
   content: "";
-  width: 320px;
+  width: 420px;
   height: 5px;
   background-color: var(--green);
   margin-top: 10px;
@@ -558,20 +564,46 @@ header .hamburger-inner::after {
   transition: background-color 0.4s ease;
 }
 
-.filter-box p {
+.filter-box button {
+  width: auto;
+  color: var(--main-color);
   padding: 5px 10px;
 }
 
-.filter-box:hover {
-  color: white;
-  background-color: var(--green);
-  box-shadow: inset 2px 5px 2px rgba(0, 0, 0, 0.25);
+.filter-box button:disabled {
+  opacity: .5;
 }
 
-.filter-box.is-active {
+.filter-box button:hover:disabled {
+  background-color: #dddcdc;
+  color: var(--main-color);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.filter-box.is-active button:disabled {
+  background-color: var(--green);
+  box-shadow: inset 2px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  color: white;
+}
+
+.filter-box button:hover{
+  text-decoration: none;
   color: white;
   background-color: var(--green);
   box-shadow: inset 2px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.filter-box.is-active button {
+  color: white;
+  background-color: var(--green);
+  box-shadow: inset 2px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.filter-box.is-active button:disabled {
+  opacity: 1;
 }
 
 .box-gallery {
@@ -607,6 +639,8 @@ header .hamburger-inner::after {
   text-align: center;
   display: flex;
   align-items: flex-end;
+  position: relative;
+  overflow: hidden;
 }
 
 .gallery .box-img img {
@@ -618,6 +652,42 @@ header .hamburger-inner::after {
   filter: grayscale(0.4);
   transition: transform 0.5s ease, filter 0.5s ease;
   border-radius: 10px;
+}
+
+.gallery .box-img:hover .box-buttons{
+  transform: translateY(0);
+}
+
+.box-buttons{
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: translateY(400px);
+  transition: transform 1s ease;
+  backdrop-filter: blur(2px);
+}
+
+.box-buttons a{
+  text-decoration: none;
+  color: white;
+  width: 150px;
+  margin: 10px;
+  padding: 10px 0;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.55);
+  transition: background 1s ease;
+}
+
+.box-buttons a:hover{
+  background: rgba(0, 0, 0, 1);
 }
 
 .gallery .box-img:hover img {
@@ -902,11 +972,11 @@ form .fail {
   }
 
   .contain-animation::before {
-    width: 500px;
+    width: 650px;
   }
 
   .contain-animation::after {
-    width: 500px;
+    width: 650px;
   }
 
   .contain-center {
@@ -1033,17 +1103,6 @@ form .fail {
 
   .contacto {
     position: relative;
-  }
-
-  .contacto::before {
-    content: "";
-    width: 450px;
-    height: 400px;
-    background: url("../images/estrellita-right.png") no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 
   .contacto::after {

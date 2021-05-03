@@ -8,25 +8,25 @@ function Touch($list) {
 
 }
 
-export default function scroll($list) {
+export default function scroll() {
+
+    const $listActive = document.querySelectorAll('.nav ul li');
 
     window.addEventListener('scroll', () => {
 
-        Touch($list)
+        Touch($listActive)
 
         if (window.scrollY === 0 || window.scrollY < 695) {
-            $list[0].classList.add('active');
+            $listActive[0].classList.add('active');
         } else if (window.scrollY === 695 || window.scrollY < 1277) {
-            $list[1].classList.add('active');
+            $listActive[1].classList.add('active');
         } else if (window.scrollY === 1277 || window.scrollY < 1644) {
-            $list[2].classList.add('active');
+            $listActive[2].classList.add('active');
         } else if (window.scrollY === 1644 || window.scrollY < 2267) {
-            $list[3].classList.add('active');
+            $listActive[3].classList.add('active');
         } else if (window.scrollY >= 2267) {
-            $list[4].classList.add('active');
+            $listActive[4].classList.add('active');
         }
-
-
 
     });
 
