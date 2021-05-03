@@ -90,6 +90,14 @@ header .hamburger-inner::after {
   background-color: white;
 }
 
+.btn{
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.redes-sociales span{
+  display: none;
+}
+
 /* -------------------------------------
 ----------------------------------------
   CONTAINER
