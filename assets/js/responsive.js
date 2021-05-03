@@ -27,6 +27,8 @@ function skillsMobile() {
         $boxHabilidad.classList.add('box-habilidad');
         const $img = document.createElement('img');
         $img.src = `assets/images/logos/${habilidades[i].name}.webp`;
+        $img.width = '100';
+        $img.height = '100';
         $img.alt = habilidades[i].alt;
 
         $boxHabilidad.appendChild($img);
@@ -64,6 +66,8 @@ function skillsDesktop() {
         const $img = document.createElement('img');
         $img.src = `assets/images/logos/${el.name}.webp`;
         $img.alt = el.alt;
+        $img.width = '100';
+        $img.height = '100';
 
         $boxHabilidad.appendChild($img);
         $slider.appendChild($boxHabilidad);

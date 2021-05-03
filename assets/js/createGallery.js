@@ -43,6 +43,8 @@ function drawBox(el, box) {
 
     const $img = document.createElement('img');
     $img.src = `assets/images/trabajos/${el.name}.jpg`;
+    $img.width = '330';
+    $img.height = '250';
     $img.alt = el.alt;
 
     $boxHabilidad.appendChild($img);

@@ -525,6 +525,7 @@ header .hamburger-inner::after {
 
 .box-habilidades .box-habilidad img {
   width: 50%;
+  height: 100%;
 }
 
 .responsive-habilidad {
@@ -651,6 +652,7 @@ header .hamburger-inner::after {
 .gallery .box-img img {
   background-color: white;
   width: 90%;
+  height: 100%;
   padding: 40px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
   transform: scale(0.9);
@@ -1020,9 +1022,8 @@ form .fail {
     height: 100%;
   }
 
-  .habilidades-desktop .slider .box-habilidad {
-    width: 125px;
-    margin-left: 20px;
+  .habilidades-desktop .slider img {
+    height: 100%;
   }
 
   .gallery {

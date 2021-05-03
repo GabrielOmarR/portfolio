@@ -18,6 +18,8 @@ export default function ResponsiveHabilidad() {
         const $img = document.createElement('img');
         $img.src = `assets/images/logos/${el.name}.webp`;
         $img.alt = el.alt;
+        $img.width = '100';
+        $img.height = '100';
 
         $boxHabilidad.appendChild($img);
         $responsiveHabilidad.appendChild($boxHabilidad);
