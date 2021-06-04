@@ -16,6 +16,8 @@ let trabajos = [
     { local: 'url-shortening-api-master', name: 'desktop-preview-15', difficulty: 'intermediate', alt: 'frontend Mentor url shortening api master' },
     { local: 'loopstudios-landing-page-main', name: 'desktop-preview-16', difficulty: 'junior', alt: 'frontend Mentor loopstudios landing page main' },
     { local: 'todo-app-main', name: 'desktop-preview-17', difficulty: 'intermediate', alt: 'frontend Mentor todo app main' },
+    { local: 'rock-paper-scissors-master', name: 'desktop-preview-18', difficulty: 'advanced', alt: 'frontend Mentor rock paper scissors master' },
+    { local: 'rest-countries-api-with-color-theme-switcher-master', name: 'desktop-preview-19', difficulty: 'advanced', alt: 'frontend Mentor rest countries api with color theme switcher master' },
 ];
 
 
@@ -53,23 +55,14 @@ function drawBox(el, box) {
 
 function crearElementos(box, difficulty = '') {
 
-    if (difficulty === 'advanced') {
-        const p = document.createElement('p');
-        p.style.textAlign = 'center';
-        p.style.gridColumn = '1 / -1';
-        p.textContent = 'Aun no hay trabajos subidos';
-        box.appendChild(p);
-    } else {
-        trabajos.forEach((el) => {
+    trabajos.forEach((el) => {
 
-            if (el.difficulty === difficulty) {
-                drawBox(el, box);
-            } else if (difficulty === 'all') {
-                drawBox(el, box);
-            }
-        });
-    }
-
+        if (el.difficulty === difficulty) {
+            drawBox(el, box);
+        } else if (difficulty === 'all') {
+            drawBox(el, box);
+        }
+    });
 }
 
 export function createGallery($box) {

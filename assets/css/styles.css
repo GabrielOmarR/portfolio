@@ -154,7 +154,7 @@ header .hamburger-inner::after {
 
 .header .fixed-header .user-img .name {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
   color: var(--white);
 }
 
@@ -323,7 +323,7 @@ header .hamburger-inner::after {
 }
 
 .contain .bienvenido {
-  font-size: 1.3em;
+  font-size: .9em;
   transform: translate(0, -100px);
   animation: bienvenido 1s linear forwards;
 }
@@ -341,6 +341,7 @@ header .hamburger-inner::after {
 }
 
 .contain h1 {
+  font-size: 1em;
   transform: translate(0, 100px);
   opacity: 0;
   animation: titulo 1s linear forwards;
@@ -360,7 +361,7 @@ header .hamburger-inner::after {
 
 .contain-animation::before {
   content: "";
-  width: 420px;
+  width: 300px;
   height: 5px;
   background-color: var(--green);
   margin-bottom: 10px;
@@ -372,7 +373,7 @@ header .hamburger-inner::after {
 
 .contain-animation::after {
   content: "";
-  width: 420px;
+  width: 300px;
   height: 5px;
   background-color: var(--green);
   margin-top: 10px;
@@ -837,6 +838,10 @@ form .fail {
     color: var(--font-color-menu);
     margin: 0 8px;
     margin-bottom: 20px;
+  }
+
+  .header .fixed-header .user-img .name {
+    font-size: 1.2em;
   }
 }
 
